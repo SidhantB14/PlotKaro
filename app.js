@@ -14,7 +14,7 @@ const methodOverride = require('method-override');
 const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const User = require('./models/user');
-const dbURL = "mongodb://localhost:27017/yelp-camp";
+const dbURL = process.env.DB_URL;
 // process.env.DB_URL;
 const userRoutes = require('./routes/users');
 const campgroundRoutes = require('./routes/campgrounds');
@@ -22,7 +22,7 @@ const reviewRoutes = require('./routes/reviews');
 // const { MongoStore } = require('connect-mongo');
 const MongoStore = require("connect-mongo")(session);
 // 'mongodb://localhost:27017/yelp-camp'
-mongoose.connect(dbURL, {
+mongoose.connect(dbURL||"mongodb://localhost:27017/yelp-camp", {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
@@ -45,9 +45,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')))
 
+const secret = process.env.secret || 'thisshouldbeabettersecret!';
+
 const store = new MongoStore({
     url: dbURL,
-    secret: 'thisshouldbeabettersecret!',
+    secret,
     touchAfter: 24*60*60
 });
 
@@ -57,7 +59,7 @@ store.on("error",function(e){
 
 const sessionConfig = {
     store,
-    secret: 'thisshouldbeabettersecret!',
+    secret,
     resave: false,
     saveUninitialized: true,
     cookie: {
@@ -108,9 +110,9 @@ app.use((err, req, res, next) => {
     if (!err.message) err.message = 'Oh No, Something Went Wrong!'
     res.status(statusCode).render('error', { err })
 })
-
-app.listen(3000, () => {
-    console.log('Serving on port 3000')
+const port = process.env.PORT||3000 
+app.listen(port, () => {
+    console.log(`Serving on port ${port}`)
 })
 
 
