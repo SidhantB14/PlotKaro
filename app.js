@@ -22,7 +22,7 @@ const reviewRoutes = require('./routes/reviews');
 // const { MongoStore } = require('connect-mongo');
 const MongoStore = require("connect-mongo")(session);
 // 'mongodb://localhost:27017/yelp-camp'
-mongoose.connect(dbURL||"mongodb://localhost:27017/yelp-camp", {
+mongoose.connect(dbURL, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
