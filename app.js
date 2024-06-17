@@ -35,9 +35,9 @@ db.once("open", () => {
     console.log("Database connected");
 });
 
-process.on('uncaughtException', function (err) {
-    console.log(err);
-  });
+// process.on('uncaughtException', function (err) {
+//     console.log(err);
+//   });
   
 
 const app = express();
