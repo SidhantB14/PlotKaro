@@ -1,0 +1,54 @@
+
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top navi">
+        <div class="container">
+    <a class="navbar-brand" href="/"><h3>PlotKaro</h3></a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb" aria-expanded="true">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navb" class="navbar-collapse collapse hide">
+
+      <div class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/plots">Plots</a>
+        </li>
+        <li>
+          <a class="nav-link" href="/contact">Contact</a>
+        </li>
+       
+        
+          <% if(!currentUser) {%>
+
+          <% } else {%>
+            <a class="nav-link" href="/plots/new">New Plot</a>
+          <a class="nav-link" href="/logout">Logout</a>
+          <% } %>
+      </div>
+    </div>
+</div>
+  </nav>
+
+  <!-- <nav class="navbar sticky-top navbar-expand-lg navbar-dark navi">
+    <div class="container">
+        <a class="navbar-brand" href="/campgrounds">PlotKaro</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="nav navbar-nav justify-content-end">
+                <% if(currentUser) {%>
+                <li><a class="nav-link" href="/campgrounds/new">New Plot</a></li> 
+                    <li><a class="nav-link" href="/logout">Logout</a></li>
+                <% }else{%>  
+                    <li><a class="nav-link end" href="/login">Login</a></li>
+                    <li><a class="nav-link end" href="/register">Register</a></li>
+                <% } %>  
+                              
+            </ul>
+        </div>
+    </div>
+</nav> -->
+<!-- <ul class="nav navbar-nav ml-auto">
+    <li><a class="nav-link end" href="/login">Login</a></li>
+    <li><a class="nav-link end" href="/register">Register</a></li>
+    </ul> -->

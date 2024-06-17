@@ -1,0 +1,138 @@
+<% layout('layouts/boilerplate')%>
+<div class="row">
+    <h1 class="text-center">New Campground</h1>
+    <div class="col-6 offset-3">
+        
+        <form action="/plots" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label" for="title">Title</label>
+                <input class="form-control" type="text" id="title" name="campground[title]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="natp" name="campground[natp]">
+                <label class="form-check-label" for="natp">
+                  NATP
+                </label>               
+              </div>
+            <div class="mb-3">
+                <label class="form-label" for="location">Location</label>
+                <input class="form-control" type="text" id="location" name="campground[location]" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col">
+                        <label class="form-label" for="price">Plot Price</label>
+                        <div class="input-group">
+                            <span class="input-group-text" id="price-label">₹</span>
+                            <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price"
+                                aria-describedby="price-label" name="campground[price]" required>
+                        </div>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                <div class="col">
+                    <label class="form-label" for="area">Plot Area</label>
+                    <div class="input-group">
+                        
+                        <input type="text" class="form-control" id="area" placeholder="0.00" aria-label="area"
+                            aria-describedby="area-label" name="campground[area]" required>
+                            <span class="input-group-text" id="area-label">Sq Feet</span>
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                        <label class="form-label" for="distance">Distance from Mainroad</label>
+                        <div class="input-group">
+                               <input type="text" class="form-control" id="distance" placeholder="0.00" aria-label="distance"
+                                aria-describedby="distance-label" name="campground[distance]" required>
+                                <span class="input-group-text" id="distance-label">KM</span>
+                        </div>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                    </div>
+                <div class="col">
+                    <label class="form-label" for="approach">Approach</label>
+                    <div class="input-group">
+                        
+                        <input type="text" class="form-control" id="approach" placeholder="" aria-label="area"
+                            aria-describedby="approach-label" name="campground[approach]" required>
+                            
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col">
+                    <label class="form-label" for="roadlength">roadlength</label>
+                    <div class="input-group">
+                        
+                        <input type="text" class="form-control" id="roadlength" placeholder="0.00" aria-label="area"
+                            aria-describedby="roadlength-label" name="campground[roadlength]" required>
+                            <span class="input-group-text" id="roadlength-label">Meter</span>
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col">
+                    <label class="form-label" for="soil">Soil</label>
+                    <div class="input-group">
+                        
+                        <input type="text" class="form-control" id="soil" placeholder="" aria-label="soil"
+                            aria-describedby="soil-label" name="campground[soil]" required>
+                            
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col">
+                    <label class="form-label" for="soil">direction</label>
+                    <div class="input-group">
+                        
+                        <input type="text" class="form-control" id="direction" placeholder="" aria-label="direction"
+                            aria-describedby="direction-label" name="campground[direction]" required>
+                            
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+            
+            </div></div>
+            <div class="mb-3">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control" type="text" id="description" name="campground[description]"
+                    ></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <div class="form-file custom-file">
+                    <input type="file" class="form-file-input" id="image" name="image" multiple>
+                    <label class="form-file-label" for="image">
+                        <span class="form-file-text custom-file-label">Choose image(s)...</span>
+                        <span class="form-file-button">Browse</span>
+                    </label>
+                </div>
+            </div>
+                <button class="btn btn-success col-12 mb-3" type="submit">Add plot</button>
+            </div>
+        </form>
+    </div>
+</div>
