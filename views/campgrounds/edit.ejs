@@ -1,7 +1,7 @@
 <% layout('layouts/boilerplate')%>
 <div class="row">
     <h1 class="text-center">Edit Plot</h1>
-    <div class="col-6 offset-3">
+    <div class="col-10 offset-1">
         
         <form action="/plots/<%=campground._id%>?_method=PUT" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
             <div class="mb-3">
@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="row mb-3">
-                <div class="col">
+                <div class="col-sm-6">
                         <label class="form-label" for="price">Plot Price</label>
                         <div class="input-group">
                             <span class="input-group-text" id="price-label">₹</span>
@@ -36,7 +36,7 @@
                             Looks good!
                         </div>
                     </div>
-                <div class="col">
+                <div class="col-sm-6">
                     <label class="form-label" for="area">Plot Area</label>
                     <div class="input-group">
                         
@@ -51,7 +51,7 @@
             </div>
 
             <div class="row mb-3">
-                <div class="col">
+                <div class="col-sm-6">
                         <label class="form-label" for="distance">Distance from Mainroad</label>
                         <div class="input-group">
                                <input type="text" class="form-control" id="distance"  aria-label="distance"
@@ -62,6 +62,7 @@
                             Looks good!
                         </div>
                     </div>
+                    <div class="col-sm-6">
                     <label class="form-label" for="roadlength">roadlength</label>
                     <div class="input-group">
                         
@@ -69,19 +70,19 @@
                             aria-describedby="roadlength-label" name="campground[roadlength]" value="<%=campground.distance %>"required>
                             <span class="input-group-text" id="roadlength-label">Meter</span>
                     </div>
-                <div class="col">
+                    </div>
+                <div class="col-sm-4">
                     <label class="form-label" for="approach">Approach</label>
                     <div class="input-group">
                         
                         <input type="text" class="form-control" id="approach" aria-label="area"
                             aria-describedby="approach-label" name="campground[approach]" value="<%=campground.approach%>"required>
-                            <span class="input-group-text" id="approach-label" >KM</span>
                     </div>
                     <div class="valid-feedback">
                         Looks good!
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-sm-4">
                     <label class="form-label" for="soil">Soil</label>
                     <div class="input-group">
                         
@@ -92,14 +93,16 @@
                     <div class="valid-feedback">
                         Looks good!
                     </div>
+
                 </div>
-                <div class="mb-3">
-                <label class="form-label" for="direction">Direction</label>
-                <input class="form-control" type="text" id="direction" name="campground[direction]" value="<%=campground.direction %>"  required>
-                <div class="valid-feedback">
-                    Looks good!
+                <div class="col-sm-4">
+                    <label class="form-label" for="direction">Direction</label>
+                    <input class="form-control" type="text" id="direction" name="campground[direction]" value="<%=campground.direction %>"  required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
                 </div>
-            </div>
+                
             </div>
             <div class="mb-3">
                 <label class="form-label" for="description">Description</label>
@@ -109,6 +112,7 @@
                     Looks good!
                 </div>
             </div>
+        
             <!-- <div class="mb-3">
                 <label class="form-label" for="image">Image</label>
                 <input class="form-control" type="text" id="image" name="campground[image]" required>
@@ -140,4 +144,5 @@
             </div>
         </form>
     </div>
+</div>
 </div>

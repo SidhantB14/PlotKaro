@@ -1,7 +1,7 @@
 <% layout('layouts/boilerplate')%>
 <div class="row">
     <h1 class="text-center">New Campground</h1>
-    <div class="col-6 offset-3">
+    <div class="col-10 offset-1">
         
         <form action="/plots" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
             <div class="mb-3">
@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="row mb-3">
-                <div class="col">
+                <div class="col-sm-6">
                         <label class="form-label" for="price">Plot Price</label>
                         <div class="input-group">
                             <span class="input-group-text" id="price-label">₹</span>
@@ -36,7 +36,7 @@
                             Looks good!
                         </div>
                     </div>
-                <div class="col">
+                <div class="col-sm-6">
                     <label class="form-label" for="area">Plot Area</label>
                     <div class="input-group">
                         
@@ -51,7 +51,7 @@
             </div>
 
             <div class="row mb-3">
-                <div class="col">
+                <div class="col-sm-4">
                         <label class="form-label" for="distance">Distance from Mainroad</label>
                         <div class="input-group">
                                <input type="text" class="form-control" id="distance" placeholder="0.00" aria-label="distance"
@@ -62,7 +62,7 @@
                             Looks good!
                         </div>
                     </div>
-                <div class="col">
+                <div class="col-sm-4">
                     <label class="form-label" for="approach">Approach</label>
                     <div class="input-group">
                         
@@ -74,7 +74,7 @@
                         Looks good!
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-sm-4">
                     <label class="form-label" for="roadlength">roadlength</label>
                     <div class="input-group">
                         
@@ -88,7 +88,7 @@
                 </div>
                 </div>
                 <div class="row">
-                <div class="col">
+                <div class="col-sm-6">
                     <label class="form-label" for="soil">Soil</label>
                     <div class="input-group">
                         
@@ -100,7 +100,7 @@
                         Looks good!
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-sm-6">
                     <label class="form-label" for="soil">direction</label>
                     <div class="input-group">
                         

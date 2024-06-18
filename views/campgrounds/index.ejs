@@ -25,11 +25,11 @@
                     <div class="card-header h6 text-center">
                         <%= campground.title %> at <%= campground.location %> 
                       </div>
-                      <div class="card-text">
+                      
                      <ul class="list-group list-group-horizontal indexls">
-                     <li class="list-group-item lin"><%= campground.area %> square foot <li class="list-group-item lin"><Span class="font-weight-bold"></Span>₹<%= Math.floor(campground.price/campground.area)%>/sq ft</Span></li>
+                     <li class="list-group-item lin"><Span class="font-weight-bold"><%= campground.area %> square foot </Span><li class="list-group-item lin"><Span class="font-weight-bold">₹<%= Math.floor(campground.price/100000)%>L | ₹<%= Math.floor(campground.price/campground.area)%>/sq.ft</Span></li>
                     </ul>
-                    </div>
+                    
                      <a class="stretched-link" href="/plots/<%=campground._id%>"></a>
                  </div>
                 </div>
