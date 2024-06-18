@@ -10,6 +10,15 @@
                 
 }
 
+.loc{
+    border-top-style: none;
+    
+    font-size: small;
+}
+
+.headrow{
+    border-bottom-style: none;
+}
 
 #contactbtn:hover{
     border: 2px solid teal;
@@ -65,6 +74,7 @@
 
 .indexls{
     font-size: small;
+    
 }
 .card{
     border-radius: 5%;
