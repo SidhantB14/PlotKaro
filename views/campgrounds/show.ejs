@@ -51,14 +51,14 @@
                 <li class="list-group-item" id="Price"><i class="fa-solid fa-maximize"></i> <%= campground.area%> sq ft<Span id="persq"><i class="fa-solid fa-indian-rupee-sign"></i> <Span class="font-weight-bold ps"><%= (campground.price/100000).toFixed(2);%>L | <%= Math.floor(campground.price/campground.area)%>/sq.ft</Span></Span></li>
                 
                 <ul class="list-group list-group-horizontal">
-                    <li class="list-group-item col-md-4 lin" id="approach"><div class="row"><div class="col-2"><i class="fa-solid fa-road size"></i></div><div class="col-10"><span class="text-muted">Road Access</span> <br class=""><%= campground.distance%>KM </div></div></li>
-                    <li class="list-group-item col-md-4 lin" id="approach"> <div class="row"><div class="col-2"><i class="fa-solid fa-up-down-left-right size"></i></div><div class="col-10"><span class="text-muted">Plot Position</span><br class=""><%= campground.approach%> </div></div></li>
-                    <li class="list-group-item col-md-4 lin" id="approach"> <div class="row"><div class="col-2"><i class="fa-solid fa-arrows-left-right size"></i></div><div class="col-10"><span class="text-muted">Road Width</span><br class=""><%= campground.roadlength%> meter</div></div></li>                    
+                    <li class="list-group-item col-4 lin" id="approach"><div class="row"><div class="col-2"><i class="fa-solid fa-road size"></i></div><div class="col-10"><span class="text-muted">Road Access</span> <br class=""><%= campground.distance%>KM </div></div></li>
+                    <li class="list-group-item col-4 lin" id="approach"> <div class="row"><div class="col-2"><i class="fa-solid fa-up-down-left-right size"></i></div><div class="col-10"><span class="text-muted">Plot Position</span><br class=""><%= campground.approach%> </div></div></li>
+                    <li class="list-group-item col-4 lin" id="approach"> <div class="row"><div class="col-2"><i class="fa-solid fa-arrows-left-right size"></i></div><div class="col-10"><span class="text-muted">Road Width</span><br class=""><%= campground.roadlength%> meter</div></div></li>                    
                 </ul>
                 <ul class="list-group list-group-horizontal">
-                    <li class="list-group-item col-md-4 lin" id="approach"> <div class="row"><div class="col-2"><i class="fa-solid fa-compass size"></i></div><div class="col-10"><span class="text-muted">Facing</span><br class=""><%= campground.direction%> </div></div></li>
-                    <li class="list-group-item col-md-4 lin" id="approach"> <div class="row"><div class="col-2"><i class="fa-solid fa-mound size"></i></div><div class="col-10"><span class="text-muted">Soil Type</span><br class=""><%= campground.soil%> </div></div></li>
-                    <li class="list-group-item col-md-4 lin" id="approach"></li>
+                    <li class="list-group-item col-4 lin" id="approach"> <div class="row"><div class="col-2"><i class="fa-solid fa-compass size"></i></div><div class="col-10"><span class="text-muted">Facing</span><br class=""><%= campground.direction%> </div></div></li>
+                    <li class="list-group-item col-4 lin" id="approach"> <div class="row"><div class="col-2"><i class="fa-solid fa-mound size"></i></div><div class="col-10"><span class="text-muted">Soil Type</span><br class=""><%= campground.soil%> </div></div></li>
+                    <li class="list-group-item col-4 lin" id="approach"></li>
                 </ul>
                 <%if(campground.description){%>
                     <li class="list-group-item"> <%= campground.description%></li>
